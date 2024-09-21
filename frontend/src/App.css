@@ -1,0 +1,72 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.video {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.stream {
+  max-width: 100%;
+  height: auto;
+  /* margin-top: 20px; */
+  position: relative;
+  top: -80%;
+  margin-bottom: 0%;
+}
+
+@media (min-width: 768px) {
+  .app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video {
+    grid-column: span 2;
+  }
+
+  .stream {
+    grid-column: span 2;
+  }
+
+  .button-group {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+}
